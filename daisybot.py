@@ -75,6 +75,17 @@ def main():
         - **Search for Code**: Use keywords like 'code example', 'syntax', or 'how-to' to get relevant code snippets.
         - **Navigate Updates**: Switch to 'Updates' mode to browse the latest Streamlit updates in detail.
         """)
+        
+    # Display advanced interactions
+    show_advanced_info = st.sidebar.checkbox("Show Advanced Interactions", value=False)
+    if show_advanced_info:
+        st.sidebar.markdown("""
+        ### Advanced Interactions
+        - **Generate an App**: Use keywords like **generate app**, **create app** to get a basic Streamlit app code.
+        - **Code Explanation**: Ask for **code explanation**, **walk me through the code** to understand the underlying logic of Streamlit code snippets.
+        - **Project Analysis**: Use **analyze my project**, **technical feedback** to get insights and recommendations on your current Streamlit project.
+        - **Debug Assistance**: Use **debug this**, **fix this error** to get help with troubleshooting issues in your Streamlit app.
+        """)
 
     # Load and display sidebar image
   
