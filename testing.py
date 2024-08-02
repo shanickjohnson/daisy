@@ -21,22 +21,21 @@ def main():
     if 'conversation_history' not in st.session_state:
         st.session_state.conversation_history = []
 
-    # Input box for user to type messages
-    user_input = st.text_input("You:", "")
+    # Define the form for user input
+    with st.form(key='chat_form', clear_on_submit=True):
+        user_input = st.text_input("You:", "")
+        submit_button = st.form_submit_button(label='Send')
 
-    if st.button("Send") or user_input:
-        # Add user input to conversation history
-        st.session_state.conversation_history.append(f"You: {user_input}")
+        if submit_button and user_input:
+            # Add user input to conversation history
+            st.session_state.conversation_history.append(f"You: {user_input}")
 
-        # Generate response from the chat bot
-        prompt = "\n".join(st.session_state.conversation_history) + "\nChat Bot:"
-        response = generate_response(prompt)
-        
-        # Add chat bot response to conversation history
-        st.session_state.conversation_history.append(f"Chat Bot: {response}")
+            # Generate response from the chat bot
+            prompt = "\n".join(st.session_state.conversation_history) + "\nChat Bot:"
+            response = generate_response(prompt)
 
-        # Clear the input box
-        st.text_input("You:", "", key="new_input")
+            # Add chat bot response to conversation history
+            st.session_state.conversation_history.append(f"Chat Bot: {response}")
 
     # Display conversation history
     for line in st.session_state.conversation_history:
