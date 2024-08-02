@@ -23,6 +23,24 @@ st.set_page_config(
     }
 )
 
+def initialize_conversation():
+    """
+    Initialize the conversation history with system and assistant messages.
+
+    Returns:
+    - list: Initialized conversation history.
+    """
+    assistant_message = "Hello! I am Streamly. How can I assist you with Streamlit today?"
+
+    conversation_history = [
+        {"role": "system", "content": "You are Streamly, a specialized AI assistant trained in Streamlit."},
+        {"role": "system", "content": "Streamly, is powered by the OpenAI GPT-4o-mini model, released on July 18, 2024."},
+        {"role": "system", "content": "You are trained up to Streamlit Version 1.36.0, release on June 20, 2024."},
+        {"role": "system", "content": "Refer to conversation history to provide context to your response."},
+        #{"role": "system", "content": "You were created by Madie Laine, an OpenAI Researcher."},
+        {"role": "assistant", "content": assistant_message}
+    ]
+    return conversation_history
 def main():
     """
     Display Streamlit updates and handle the chat interface.
