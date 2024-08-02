@@ -41,6 +41,15 @@ def initialize_conversation():
         {"role": "assistant", "content": assistant_message}
     ]
     return conversation_history
+
+def initialize_session_state():
+    """Initialize session state variables."""
+    if "history" not in st.session_state:
+        st.session_state.history = []
+    if 'conversation_history' not in st.session_state:
+        st.session_state.conversation_history = []
+
+
 def main():
     """
     Display Streamlit updates and handle the chat interface.
