@@ -28,7 +28,7 @@ API_DOCS_URL = "https://docs.streamlit.io/library/api-reference"
 # Streamlit Page Configuration
 st.set_page_config(
     page_title="Daisy - An Intelligent Streamlit Assistant",
-    page_icon="imgs/avatar_streamly.png",
+    page_icon="bfree.png",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items={
