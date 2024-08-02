@@ -88,7 +88,7 @@ def main():
         """)
 
     if mode == "Chat with Streamly":
-        chat_input = st.chat_input("Ask me about Streamlit updates:")
+        chat_input = st.chat_input("How can I help:")
         if chat_input:
             latest_updates = load_streamlit_updates()
             on_chat_submit(chat_input, latest_updates)
