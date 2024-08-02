@@ -54,12 +54,12 @@ def main():
     """
     Display Streamlit updates and handle the chat interface.
     """
-    #initialize_session_state()
+    initialize_session_state()
 
-    #if not st.session_state.history:
-    initial_bot_message = "Hello! How can I assist you with Streamlit today?"
-        #st.session_state.history.append({"role": "assistant", "content": initial_bot_message})
-        #st.session_state.conversation_history = initialize_conversation()
+    if not st.session_state.history:
+        initial_bot_message = "Hello! How can I assist you with Streamlit today?"
+        st.session_state.history.append({"role": "assistant", "content": initial_bot_message})
+        st.session_state.conversation_history = initialize_conversation()
 
     # Insert custom CSS for glowing effect
     st.markdown(
