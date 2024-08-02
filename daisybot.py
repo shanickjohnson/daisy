@@ -30,7 +30,7 @@ def main():
     #initialize_session_state()
 
     #if not st.session_state.history:
-        initial_bot_message = "Hello! How can I assist you with Streamlit today?"
+    initial_bot_message = "Hello! How can I assist you with Streamlit today?"
         #st.session_state.history.append({"role": "assistant", "content": initial_bot_message})
         #st.session_state.conversation_history = initialize_conversation()
 
