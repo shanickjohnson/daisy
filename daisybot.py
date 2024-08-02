@@ -58,6 +58,23 @@ def main():
         """,
         unsafe_allow_html=True,
     )
+    
+    st.sidebar.markdown("---")
+
+    # Sidebar for Mode Selection
+    mode = st.sidebar.radio("Select Mode:", options=["Latest Updates", "Chat with Streamly"], index=1)
+
+    st.sidebar.markdown("---")
+
+    # Display basic interactions
+    show_basic_info = st.sidebar.checkbox("Show Basic Interactions", value=True)
+    if show_basic_info:
+        st.sidebar.markdown("""
+        ### Basic Interactions
+        - **Ask About Streamlit**: Type your questions about Streamlit's latest updates, features, or issues.
+        - **Search for Code**: Use keywords like 'code example', 'syntax', or 'how-to' to get relevant code snippets.
+        - **Navigate Updates**: Switch to 'Updates' mode to browse the latest Streamlit updates in detail.
+        """)
 
     # Load and display sidebar image
   
