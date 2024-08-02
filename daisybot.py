@@ -88,10 +88,10 @@ def main():
         """)
 
     if mode == "Chat with Streamly":
-    chat_input = st.chat_input("Ask me about Streamlit updates:")
-    if chat_input:
-        latest_updates = load_streamlit_updates()
-        on_chat_submit(chat_input, latest_updates)
+        chat_input = st.chat_input("Ask me about Streamlit updates:")
+        if chat_input:
+            latest_updates = load_streamlit_updates()
+            on_chat_submit(chat_input, latest_updates)
 
     # Load and display sidebar image
   
